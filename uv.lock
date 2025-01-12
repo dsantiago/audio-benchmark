@@ -6,13 +6,6 @@ resolution-markers = [
     "python_full_version < '3.12.4'",
 ]
 
-[manifest]
-
-[[manifest.dependency-metadata]]
-name = "flash-attn"
-version = "2.7.2.post1"
-requires-dist = ["torch", "einops"]
-
 [[package]]
 name = "accelerate"
 version = "1.2.1"
@@ -226,23 +219,12 @@ dependencies = [
     { name = "transformers" },
 ]
 
-[package.optional-dependencies]
-build = [
-    { name = "packaging" },
-    { name = "setuptools" },
-    { name = "torch" },
-]
-compile = [
-    { name = "flash-attn" },
-]
-
 [package.metadata]
 requires-dist = [
     { name = "accelerate", specifier = ">=1.2.1" },
     { name = "datasets", specifier = ">=3.2.0" },
     { name = "evaluate", specifier = ">=0.4.3" },
     { name = "flash-attn", specifier = ">=2.7.2.post1" },
-    { name = "flash-attn", marker = "extra == 'compile'" },
     { name = "google-cloud-storage", specifier = ">=2.19.0" },
     { name = "huggingface-hub", extras = ["cli"], specifier = ">=0.27.1" },
     { name = "jiwer", specifier = ">=3.0.5" },
@@ -251,11 +233,8 @@ requires-dist = [
     { name = "librosa", specifier = ">=0.10.2.post1" },
     { name = "matplotlib", specifier = ">=3.10.0" },
     { name = "numba", specifier = ">=0.60.0" },
-    { name = "packaging", marker = "extra == 'build'" },
     { name = "python-dotenv", specifier = ">=1.0.1" },
-    { name = "setuptools", marker = "extra == 'build'" },
     { name = "soundfile", specifier = ">=0.13.0" },
-    { name = "torch", marker = "extra == 'build'" },
     { name = "transformers", specifier = ">=4.48.0" },
 ]
 

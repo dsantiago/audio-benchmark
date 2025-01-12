@@ -21,15 +21,3 @@ dependencies = [
     "soundfile>=0.13.0",
     "transformers>=4.48.0",
 ]
-
-[project.optional-dependencies]
-build = ["torch", "setuptools", "packaging"]
-compile = ["flash-attn"]
-
-[tool.uv]
-no-build-isolation-package = ["flash-attn"]
-
-[[tool.uv.dependency-metadata]]
-name = "flash-attn"
-version = "2.7.2.post1"
-requires-dist = ["torch", "einops"]
