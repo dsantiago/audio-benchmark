@@ -1,0 +1,1 @@
+Gerencie as configurações de segurança do usuário e supervisione-o.

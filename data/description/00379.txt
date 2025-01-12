@@ -1,0 +1,1 @@
+macro, lotusscript, corelscript, quickscript, saxbasic, wordbasic, winwrap, delphi
