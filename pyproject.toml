@@ -5,9 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.2.1",
     "datasets>=3.2.0",
+    "evaluate>=0.4.3",
+    "flash-attn>=2.7.2.post1",
     "google-cloud-storage>=2.19.0",
     "huggingface-hub[cli]>=0.27.1",
+    "jiwer>=3.0.5",
     "jupyterlab>=4.3.4",
     "langchain-google-community[speech]>=2.0.4",
     "librosa>=0.10.2.post1",
@@ -15,4 +19,17 @@ dependencies = [
     "numba>=0.60.0",
     "python-dotenv>=1.0.1",
     "soundfile>=0.13.0",
+    "transformers>=4.48.0",
 ]
+
+[project.optional-dependencies]
+build = ["torch", "setuptools", "packaging"]
+compile = ["flash-attn"]
+
+[tool.uv]
+no-build-isolation-package = ["flash-attn"]
+
+[[tool.uv.dependency-metadata]]
+name = "flash-attn"
+version = "2.7.2.post1"
+requires-dist = ["torch", "einops"]
